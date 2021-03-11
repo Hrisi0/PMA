@@ -1,0 +1,33 @@
+class App {
+		constructor(name, logo, welcomemessage, logoutmessage, updateURL) {     
+
+       this.name = name;
+       this.logo = logo;
+       this.welcomemessage = welcomemessage;
+       this.logoutmessage = logoutmessage;
+       this.updateURL = updateURL;
+
+   }
+		open () { 
+    	console.log (this.welcomemessage);
+    }
+    close () {
+    	console.log (this.logoutmessage);
+    } 
+ 		update () {
+    	console.log (this.updateURL);
+      window.location.replace (this.updateURL);
+    }
+} 
+var Facebook = new App ( "Facebook", "logo.gif", "Welcome Dude","Goodbye","https://facebook.com/update/" )
+
+Facebook.open ();
+Facebook.close ();
+Facebook.update ();
+
+var Instagram = Object.create(Facebook);
+Instagram.name = "Instagram";
+Instagram.updateURL = "https://instagram.com/update/"
+Instagram.open ();
+Instagram.close ();
+Instagram.update ();
