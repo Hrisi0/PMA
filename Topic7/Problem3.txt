@@ -1,0 +1,56 @@
+class Monitor {
+			constructor ( browser, display, brand, fullModelName, minimumResolutionPageRequirement, maximumResolutionPageRequirement,minimumPagedisplayColor) {
+      
+  			this.browser = browser;
+        this.display = display;
+        this.brand = brand;
+        this.fullModelName = fullModelName;
+        this.minimumResolutionPageRequirement = minimumResolutionPageRequirement;
+        this.maximumResolutionPageRequirement = maximumResolutionPageRequirement;
+        this.minimumPagedisplayColor = minimumPagedisplayColor;
+      }
+}
+ class Browser {
+ 		constructor ( width, height, sizesUnit) {
+    		this.width = width;
+        this.height = height;
+        this.sizesUnit = sizesUnit;
+    }
+ }    
+class Display { 
+	constructor ( colorDepth, colorUnit,trueColor  ) {
+  		this.colorDept = colorDepth;
+      this.colorUnit = colorUnit;
+      this.trueColor = trueColor;
+  }
+ }
+class ResolutionPageRequirements {
+		constuctor ( width, height) {
+    	this.width = width;
+      this.height = height;
+    }
+}
+
+var browserWidth = 1920;
+var browserHeight = 1080;
+var browserSizesUnit = "pixels";
+var displayColorDepth = 12; 
+var displayColorUnit = "bit";
+var displayTrueColor = true;
+var monitorBrand = "DELL";
+var monitorFullModelName = "Dell UltraSharp 27 4K PremierColor";
+var minimumResolutionPageRequirements = [1200, 480];
+var maximum_resolution_page_requirements_width = 3840;
+var maximum_resolution_page_requirements_height = 2160;
+var minimumPagedisplayColorDepth = 8;
+
+var browser = new Browser( browserWidth, browserHeight,browserSizesUnit )
+console.log ( browser);
+var display = new Display(displayColorDepth,displayColorUnit,displayTrueColor  )
+console.log ( display);
+var minResolutionPageRequirementsWidth = minimumResolutionPageRequirements [0]
+var minResolutionPageRequirementsHeight = minimumResolutionPageRequirements [1]
+var minResolutionPageRequirements = new ResolutionPageRequirements (minResolutionPageRequirementsWidth,minResolutionPageRequirementsHeight)
+var maxResolutionpageRequirements = new ResolutionPageRequirements (maximum_resolution_page_requirements_width, maximum_resolution_page_requirements_height)
+var monitor = new Monitor ( browser, display, monitorBrand,monitorFullModelName, minResolutionPageRequirements, maxResolutionpageRequirements, minimumPagedisplayColorDepth )
+console.log ( monitor);
