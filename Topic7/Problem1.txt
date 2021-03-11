@@ -1,0 +1,15 @@
+function checkUsername(minLength, maxLength, errorMessage, username, url) { 
+	if (typeof username !== 'string'){
+   	console.log ( "Type of username is not string" );
+  	windоw.аlеrt(errorMessage);
+    return
+  }
+  if (username.length < minLength || username.length > maxLength  ) {
+   	console.log ( "Username is not valid" );
+  	windоw.аlеrt(errorMessage);
+    return
+  }
+  console.log ( "replace window" );
+  window.location.replace (url);
+}
+checkUsername ( 5, 20, "Not correct", 'jijoni', "http://pma.bg")
